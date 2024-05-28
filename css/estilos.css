@@ -1,0 +1,1564 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/*para mantener las medidas en la pagina web*/
+*{
+    padding: 0;
+    margin: 0;    
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    text-decoration: none;
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif;  
+    background: #0f0f0f;
+}
+
+/*centrar elementos*/
+.container{
+    max-width: 1200px; /*liminat tamaño ancho*/
+    margin: 0 auto;
+}
+
+.header{
+    background-image: url('/img/bg.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    
+    /*center elmentos del header*/
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    /*coloar uno al costado del otro*/
+    display: flex; 
+
+    align-items: center;
+
+    /*distribucin*/
+    justify-content: space-between;
+
+
+    /*colcoa el menu frente a cualqueir otro elemento*/
+    z-index: 1000;
+
+    background-color: #040404;
+    border-bottom: 1px solid #ffffff29;
+}
+
+.logo{
+    color: #a70a15;
+    font-size: 25px;
+
+    font-weight: 800; 
+    /*grosor de la letra*/
+}
+
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+    font-size: 18px;
+    padding: 20px;
+    color: #fff;
+
+    /*poscionarlo y hacerle modificaciones a los enlaces*/
+    display: block;
+}
+
+.menu .navbar ul li a:hover{
+    color: #e1160d;
+}
+
+#menu{
+    display: none; /*ocultar el checkbock*/
+}
+
+.menu-icono{
+    width: 25px;
+}
+
+.menu label{
+    /*ocultar por ahora ya q en responsive se va a mostrar*/
+    display: none; 
+
+    cursor: pointer;
+}
+
+.header-info h1{
+    color: #e1160d;
+    text-transform: uppercase;
+    font-size: 70px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.header-info p{
+    color: #fff;
+    font-size: 22px;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+}
+
+/*enlaces son de tipo texto para colcoar margin y padding*/
+.btn-1{
+    display: inline-block;
+    padding: 10px 35px;
+    border-radius: 10px;
+    background-color: #e1160d;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.btn-1:hover{
+    background-color: #a70a15;
+}
+
+.gym{
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+}
+
+.gym-1{
+    width: 50%;
+    padding-right: 150px;
+}
+
+
+.gym-1 h2{
+    font-size: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 35px;
+}
+
+.gym-1 p{
+    font-size: 16px;
+    color: #818181;
+    margin-bottom: 35px;
+}
+
+.gym-1 span{
+    color: #a70a15;
+}
+
+.btn-2{
+    display: inline-block;
+    padding: 8px 45px;
+    border-radius: 20px;
+    background-color: #e1160d;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.btn-2:hover{
+    background-color: #a70a15;
+}
+
+.img-1,
+.img-2{
+    width: 250px; /*limitar*/  
+
+    margin-right: 30px;    
+}
+
+footer{
+    border-top: 1px solid #ffffff29;
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #040404;
+}
+
+.footer h3{
+    color: #a70a15;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.links ul{
+    display: flex;
+}
+
+.links ul li{
+    margin-right: 35px;
+}
+
+.links ul li a{
+    color: #818181;
+}
+
+
+/*OJO si no utilizas por el moemtno Bootstrap utilizas mediaquery*/
+@media screen  and (max-width:991px)  {
+    
+    .menu{
+        padding: 20px;
+    }
+
+    .menu label{
+        display: initial;
+    }
+
+    .menu .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #303030;
+
+        display: none; /*no mostrar hasta pulsar*/
+    }
+
+    .menu .navbar ul li{
+        width: 100%;
+    }
+
+    /*para q funciuone la parte responsiva y aparezca los menus*/
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+
+    .header-content{
+        padding: 30px;
+    }
+
+    .header-info h1{
+        font-size: 50px;
+        margin-bottom: 5px;
+    }
+
+    .gym{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .gym-1{
+        width: 100%;
+        padding: 0;
+        order: 1;   /*cambair el orden de los elementos */
+    }
+
+    .gym-1 h2{
+        margin-bottom: 15px;
+    }
+
+    .btn-2{
+        margin-bottom: 35px;
+    }
+
+    .gym-2{
+        order: 2;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-1,
+    .img-2{
+        margin: 0 0 20px 0;
+        /*sepraion entre las imagenes */
+    }
+
+    /*alinear al centro*/
+    .footer{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer h3{
+        margin-bottom: 15px;
+    }
+
+    .links ul li{
+        margin: 0 10px;
+    }
+
+}
+
+
+
+
+
+/*Proyecto
+------------
+*{
+    padding: 0;
+    margin: 0;
+
+    para mantener las medidas en la pagina web
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+*/
+
+
+
+/*Proyecto
+-------------
+para q los elemento se coloquen uno al lado del otro
+header nav ul li{
+    float: left;    
+}
+
+contendor padre para q apare<ca el fonod blanco
+overflow: hidden; 
+
+para modiicar el paddin a al etiqueta a
+display: inline-block;
+
+
+
+meta viewport
+--------------
+Es decir q en cualquier tipo de tamaño vamos a estableer ciertas medidas
+
+Recomendablecolocar porcentejes los tamaños del ancho
+
+
+
+indica cuando nos encontramos en una pantalla y tenga el tamaño de ... ejecutar los estilo q tenga
+
+
+
+
+
+@media screen and (max-width:800px) {
+    .main{
+        width: 100%;
+    }
+
+    aside{
+        width: 100%;
+    }
+
+    footer{
+        width: 100%;
+    }
+}
+
+
+
+*/
+
+
+
+
+
+
+/*
+Animaciones (usar los @keyframes: son puntos donde habra un cambio)
+---------------------------------
+
+--1era forma de animacion
+-----------------------------------------------------------------------
+@keyframes colores{
+    from{background: #9eb3c2;}  inicia
+    to{background: #21295c;}    termina
+
+}
+
+
+.caja1{
+    background: #9eb3c2;
+    width: 200px;
+    height: 200px;
+
+    animation-name: colores;                especificar la animacion
+    animation-duration: 5s;                 especificar la duracion
+    animation-iteration-count: infinite;    especificar q se repita
+}
+-----------------------------------------------------------------------
+
+
+
+--2da forma de animacion (con porcentajes)
+----------------------------------------------------------------------
+
+@keyframes colores2 {
+    0%{background: #000000;}
+    25%{background: #483519; width: 300px;}
+    5%{background: #6F7C12; width: 400px;}
+    75%{background: #AAD922; width: 300px;}
+    100%{background: #000000; width: 200px;}
+}
+
+.caja2{
+    background: #9eb3c2;
+    width: 200px;
+    height: 200px;
+    margin-top: 100px;
+
+    animation-name: colores2;    especificar la animacion
+    animation-duration: 5s;     especificar la duracion
+    animation-iteration-count: infinite;    especificar q se repita
+}
+----------------------------------------------------------------------
+
+
+*/
+
+
+
+/*
+Transiciones
+-----------------------------
+
+    decir trasnofmracion aplicado al background
+    transition: background 1s ease;  
+    
+    trnsicon cambio de tamaño y color
+    transition: all 1s ease;
+
+    agregar un retraso antes de q se ejeuct4e la transcicon
+    transition-delay: 2s;
+
+
+*/
+
+
+	/* Velocidad de Curva
+            ease - inicio lento, despues rapido y termina lento
+            linear - misma velocida de inicio a fin
+            ease-in - inicio lento
+            ease-out - final lento
+            ease-in-out - inicio lento y final lento
+	*/
+
+
+
+
+
+/*
+Transform
+-----------------------------
+
+trasladar elementos
+transform: translate(200px, 50px);
+            despalzmi 200px ala derecha
+            despalzmi 50px abajo
+
+*/
+
+
+
+
+
+/*
+	Cosas que podemos hacer con transform:
+	- Trasladar elementos
+	- Escalar Elementos
+	- Rotar Elementos
+	- Sesgar Elementos
+	*/
+
+
+
+
+
+
+
+
+
+/*
+Pracrtica : Fomrularios
+-----------------------------
+
+body{
+    font-family: Arial, Helvetica, sans-serif;    
+}
+
+ojo: u6tilizar propiedad box-sizing para q los tamaños seung las medidas px por ejemplo, encajen en la pagina web toda la web 
+
+*{
+    padding: 0;  
+    margin: 0;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+
+los input son elementos de tipo linea y por ello queremos colocarlos uno de bajo de otro
+
+.formulario input{
+    display: block;
+}
+
+
+ahroa accder a cada input
+.formulario input[type="text"],
+.formulario input[type="email"],
+
+
+
+*/
+
+
+/*
+listas
+-----------------------------
+quitar las viñaetas
+ul, ol{
+    list-style: none;
+    padding: 0;     quitamos el padding
+}
+
+cambiar el tipo de elemento (vieñta) de la lista
+ul{
+    list-style: circle;
+    list-style: square;
+}
+
+agrgear una imagen como viñeta
+ul{
+    list-style: square;
+    list-style-image: url('/img/checked.png');
+}
+
+
+
+Menu
+.menu{
+    background: #4357ad;
+    width: 200px;
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+
+.menu li{
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+modificar el padding a al etiquerta a  etiqueta de enlace
+.menu li a{
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu li a:hover{
+    background: #4888d6;
+}
+
+
+
+
+Graficos:
+---------
+list-style: none | disc | circle | square
+
+Numericos:
+---------
+list-style: decimal | decimal-leading-zeo | lower-roman | upper-roman |
+			lower-latin | upper-latin
+
+
+en la liusta ordenada
+ol{
+    list-style: decimal-leading-zero;
+    list-style: upper-roman;
+}
+
+
+*/
+
+
+
+
+/*
+PseudoElementos
+-----------------------------
+uilizand dos puntos
+
+Primera letra del parrafo
+p::first-letter{
+    font-size: 40px;
+    font-weight: bold;
+
+}
+
+seleccioanr la pirmera linea
+p::first-line{
+    background: #f8c3b1;
+    line-height: 40px;
+}
+
+para seleccioanr
+*::selection{
+    background: #f9a03f;
+    color: #fff;
+}
+
+
+agregar un eleenmtto despues de nuestra caja
+.caja1::before{
+    content: 'Contenido Antes de la Caja';
+    background: #3a3a3a;
+    color: #fff;
+
+    display: block;
+    position: relative;
+    left: 50px;
+}
+
+
+agregar un eleenmtto despues de nuestra caja
+
+.caja2::after{
+    content: '';
+    width: 50px;
+    height: 50px;
+    background: #000;
+
+    display: block;
+    position: relative;
+    left: 200px;
+}
+
+
+
+agregar un eleenmtto en nuestra caja
+.caja2::after{
+    content: '';
+    width: 50px;
+    height: 50px;
+    background: #000;
+
+    display: block;
+    position: relative;
+    left: 200px;
+}
+
+
+*/
+
+
+
+
+/*
+PseudoClases
+-----------------------------
+para poner el padding a los enlaces tenemos q convertir a un display: inline-block;
+
+a{   
+    
+    padding: 20px 30px;
+    display: inline-block;    
+}
+
+
+a:hover     PseudoClase al pasar el mouse
+a:active    PseudoClase, permite seleccionar los elemtnos 
+                activos / al presionar con un clic el boton
+
+a:visited   PseudoClase, permite dar color a los enlaces 
+                visitados
+
+
+
+seleccioanr la pirmera linea
+div p::first-line{
+    background: #3a3a3a;
+    color: #fff;
+}
+
+
+seleccioanr la segundo parrafo
+div p:nth-child(2){
+    background: #009ddc;
+    color: #fff;
+    padding: 10px;
+}
+
+seleccioanr la cuarto parrafo
+div p:nth-child(4){
+    background: #ee8554;
+    color: #fff;
+    padding: 10px;
+}
+
+
+
+
+*/
+
+
+
+
+/*
+bordes
+-----------------------------
+display: inline-block;
+para q las cajas se posiconesn una al costado de la oitra
+
+
+div{
+    background: #226fc1;
+    width: 200px;
+    height: 200px;
+
+    margin: 20px;
+    display: inline-block;
+}
+
+.caja1{
+    border: 7px solid #000;
+
+    border-radius: 20px;
+}
+
+.caja2{
+    border: 7px dotted #000;
+
+    border-radius: 0px 10px 30px 50px;
+}
+
+
+.caja3{
+    border: 7px dashed #000;
+
+    border-radius: 0px 10px 0px 10px;
+}
+
+.caja4{
+    border: 7px double #000;
+
+    border-radius: 100%;
+}
+
+
+.caja5{
+    border: 7px groove #000;
+}
+
+
+.caja6{
+    border: 7px ridge #000;
+}
+
+
+.caja7{
+    border: 7px inset #000;
+}
+
+
+.caja8{
+    border: 7px outset #000;
+}
+
+
+
+*/
+
+
+
+/*
+Sombras
+-----------------------------
+box-shadow,     posiconde sombra para las cajas
+text-shadow,    posicion de sombra para el texto
+
+text-shadow: 0px 0px 0px #000;
+
+2px     posiuicona de la sombra hoizontl a la derecha
+3px     posiuicona vertical de arriba a abj
+10px    sombra difuminada
+#000    coilor
+
+
+	El primer valor es la posicion horizontal de la sombra
+	El segundo valor es la posicion vertical de la sombra
+	El tercer valor es el tamaño de la sombra
+
+	Podemos asignarle un valor para el color de la sombra	
+
+
+*/
+
+
+
+
+
+
+
+/*
+Practica 2: Galeria de imagenes
+-----------------------------
+vertical-align: top;
+elimima el espaciado arriba entre las iamgenes
+
+padding: 5px;
+es espacio contenido entre el margen y el border
+
+
+opacity: 0.5;
+bajar la opacidad entre 0 a 1 
+
+
+*/
+
+
+
+
+
+/*
+Visualizacion
+-----------------------------
+para cambair algunos comportamientos
+
+display [inline | block | none | inline-block | flex]
+
+
+eleentnbo tipo linea
+a{
+    display: block;
+}
+
+display: none;
+nos oiculta sin quitar el espacio
+
+visibility: hidden;
+oculta el elemento sin pero su espacio oculto sigue ahi
+
+
+overflow: hidden;
+permite oculata texto q sobresalen en un contenedor
+
+overflow: auto;
+nos agrega un scroll en nestro contenedor, nos soluiciacoa el posciioamiento flotante
+
+
+
+
+.caja{
+    color: #fff;
+    background: #4fb560;
+    margin: 20px 0;
+    width: 200px;
+    height: 200px;
+
+    overflow: auto;
+}
+
+.contenedor{
+    width: 600px;
+    background: #ccc;
+    margin: 20px 0px;
+
+    overflow: hidden;
+}
+
+.izquierda{
+    float: left;
+}
+
+.derecha{
+    float: right;
+}
+
+-----------------
+
+sobre poner las cajas
+
+.contenedor2 .caja{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    
+}
+
+.azul{    
+    background: #009ddc;
+    z-index: 10;
+}
+
+
+.gris{
+    background: #32021f;
+    left: 50px;
+    bottom: 80px;
+    z-index: 9;
+}
+
+
+
+
+*/
+
+
+
+
+/*
+posiconaiemtno flotante 
+-----------------------------
+
+overflow: hidden;
+premite encerrar el contenido de una forma correcta y solucionar un errror de visualizacion y se la coloca en el contendo padre
+
+float,  la propioedad float se creo para q el texto lo posiciermoas al rededor de la imagen
+
+
+.cajaPadre{
+    background: #2e294a;
+    width: 700px;
+    overflow: hidden;
+}
+
+
+
+
+.caja{
+    width: 200px;
+    color: #fff;
+    font-size: 38px;
+    height: 200px;
+    background: #0e6ba8;
+    margin: 20px;
+
+    
+}
+
+.uno{
+    float: left;
+}
+
+.udosno{
+    float: right;
+}
+
+.articulo{
+    width: 800px;
+    background: #ccc;
+
+}
+
+
+.articulo img{
+    float: left;
+}
+
+
+*/
+
+
+
+
+
+/* Tipos de Posicionamiento:
+
+	- Normal (static): Posicionamiento por defecto con el que los navegadores acomodan los elementos
+
+	- Relativo (relative): Nos permite posicionar una caja y despues moverla desde su lugar original;;; donde la vas a desplazar.
+	
+    - Abosluto (absolute): Nos permite posicionar una caja respecto a su contenedor y el resto de elementos ignoran la nueva posicion.
+	
+    - Fijo (fixed): Nos permite posicionar una caja en donde su posicion respecto a la pantalla del usuario siempre va a ser la misma... se queda pegada mientra desplazamos con la barra vertical o scroleamos.... tener encuenta caja Padre y la caja Hijo... osea qlas cajas cajas hijas la podemos poscionar dentro de una caja padre
+	
+    - Flotante (float): Nos permite desplazar las cajas todo lo posible hacia la derecha o izquierda... flotar todo los elementos de derecha a izqiueorda... ahora con ello (float) tienen elento de tipo bloque
+
+
+
+
+    position: relative;
+    top:50px;    
+    left: 200px;
+    
+
+    position: absolute;
+    top:100px;
+    left: 220px;
+
+
+    position: fixed;    
+    left: 220px;     10%;   
+    
+
+    float: left; 
+    todas las cajas con un floata left
+
+    float: right; 
+
+
+    .caja{
+        width: 200px;
+        height: 200px;
+        background: #0e6ba8;
+        margin: 20px;
+
+        todas las cajas con un floata left
+        float: left; 
+    }
+
+
+
+    -------------------------
+
+    <div class="cajaPadre">
+        <div class="caja posicionada"></div>
+    </div>
+
+    .caja{
+    width: 200px;
+    height: 200px;
+    background: #0e6ba8;
+    margin: 20px;
+}
+
+    .cajaPadre{
+    margin:20px;
+    background: #2e294e;
+    width: 500px;
+    height: 500px;
+
+    position: relative;
+}
+
+.posicionada{
+    background: #6695e8;
+
+
+    position: absolute;
+    top:;
+    right: ;
+    left: ;
+    bottom: 0%;
+}
+
+-------------------------
+
+
+*/
+
+/*
+*{
+    padding: 0;
+    margin: 0;
+}
+quitar los margenes y padding en la pagina 
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Efectos
+
+.border-radius{
+    border-radius: 100px;
+}
+
+.btn:hover{
+    opacity: .8;
+}
+
+
+
+
+.btn{
+    background: #32021f;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+
+
+    ---la etqieuta button es un elmento tipo linea----
+    display: inline-block;
+    padding: 15px 20px;
+    margin: 0 10px;
+
+}
+
+
+
+*/
+
+
+
+
+/*
+botones
+-----------
+para q loselemntos empiecen en una nueva linea usamos las etiquetas     div
+
+boton es un elemento de tipo linea
+
+*/
+
+
+
+/*
+tipos de elementos
+-------------------
+
+
+Existen 2 tipos de elementos, los que bloque (block) y los en linea (inline).
+Los block tienen por defecto un ancho del 100% y ademas no pueden tener (por defecto) otro elemento a un lado.
+
+Y los inline tienen el ancho que solo necesitan y (por defecto) los elementos automaticamente se ponen al lado del otro.
+
+--------------------------
+
+Encabeazaod, parrafos y div     abacarna el 100% del espacio q tengan disponbile (elementos tipo bloque)    tambien no pueden tener otro elemento  su lado
+
+
+Enlaces,    son de tipo linea, es decir abarcan el espacio q necesitan  tambieno no pueden tener marging , widht, height
+
+
+a lo elementos de tipo linea podemos hacer cambios usando   display     q permite copntrolar como queremos q se muestren esos bloques
+
+
+
+elemtno tipo linea tienen en su estado natural
+    display: inline
+    
+    
+display: inline-block;
+    premite modificar las propiedade de 
+    padding, width, heighnt pero siendo un elemnto en linea, es decir se colocan no al lado del otro
+
+display: flex;
+es una forma de posicionar las cjas q tenemos
+
+
+---------
+
+elemtno tipo bloque tienen en su estado natural
+    display: block
+
+    podemos cambniar 
+    a display: inline-block;    para q los
+    elemento se pongan uno al lado del otro como si fueran elementos de tipo linea
+
+
+
+*/
+
+
+/* Algunos elementos "inline"
+    a, span, img, b, i, small, cite, code,
+    em, strong, br, script, button, 
+    input, label, select, textarea.
+*/
+
+/* Algunos elementos "block"
+	div, article, section, header
+	footer, aside, table, p, video,
+	ul, ol, h1, h2, h3, h4, h5, h6
+*/
+
+
+
+
+
+
+/*
+Modelo de caja
+-----------------
+marging
+border
+padding
+
+Eliminamos los margin y padding generales que agregan 
+	los navegadores web por defecto
+
+margin, por defecto siempre hay margenes en la pagian web
+    por ello colocar un selector universal de 
+    paddgin y margin de 0
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+margin: 20px;   
+a cada uno de los 4 lados
+
+margin: 20px 0px;
+    es decir 20px , arriba y abajo
+    es decir 0px,   izquierdad y derecha
+
+-------------------------------------
+margin: 20px 10px 5px 0px;
+    es decir 20px arriba
+    es decir 10px aderecha
+    es decir 5px  abajo
+    es decir 0px  izquierda
+    
+margin-top: 20px;
+margin-right: 10px;
+margin-left: 5px;
+margin-bottom: 0px;
+------------------------------------
+
+en elk modelo de caja, dice q se traaja con 
+    width: 200px;   y no con el height: 200px;
+
+
+
+border: 2px solid red;
+    2px     grosor
+    solid   estilo
+    red     color
+
+
+*/
+
+
+
+
+
+
+
+/* 
+- Palabras Clave:
+
+	- Hay 17 palabras clave que podemos usar:
+	aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, 
+	olive,orange, purple, red, silver, teal, white, yellow
+
+	- RGB Decimal: rgb(215, 38, 61)
+
+	- RGB Porcentual: rgb(84%, 15%, 24%)
+
+	- RGB Hexadecimal: #D7263D
+
+
+
+
+
+    background: purple;
+    background: #4ee430;
+    background: rgb(50, 139, 240);    
+    background: rgb(194%, 35%, 56%);
+    background: rgba(240, 50, 145, 0.185);
+
+ */
+
+
+
+
+/*
+Unidades Relativas
+------------------------------
+	px - pixel
+	em - Relativa al tamaño de fuente que tenga su elemento padre o el mas cercano
+	rem - Relativa al tamaño de fuente especificado en el body.
+	% - porcentaje
+
+
+
+    ojo 
+    1em equicale aprox 16px
+    1.5em <> 30px
+
+    200px(div) / 20px (body) = 10em
+    
+
+    em toma el contenedor del padre o el elemento mas cercano (body)
+
+
+
+
+Unidades Abosultas
+------------------------------
+	Estas medidas nunca las vas a usar en el diseño web, pero aqui estan para que las conozcas
+	in - inches (pulgadas)
+	cm - centimetros
+	mm - milimetros
+
+*/
+
+
+
+
+
+
+/*
+
+font-family: 'Courier New', Courier, monospace;
+font-style: italic;
+
+font-weight: 200;
+ancho
+
+text-align: end;
+alineacion a la derecha
+
+text-align: justify;
+texto justificado
+
+text-decoration: underline;
+subrayado
+
+text-decoration: line-through;
+texto tachado
+
+text-decoration: none;
+texto sin subrayado
+
+
+text-transform: uppercase;
+texto en mayuscual
+
+text-transform: lowercase;
+texto todo en minusca
+
+
+text-transform: capitalize;
+primera letra de cada palbara en mayuuiscuyla
+
+letter-spacing: 10px;
+espaciado en cada letra
+
+
+line-height: 30px;
+espaciado en cada linea
+
+*/
+
+
+
+
+
+
+
+
+
+
+/*psuedoclases, es dar estilo dependindo de cual es el estado
+    q se tiene nuestro elemento 
+    
+    a:hover {
+    background: #f9a03f;
+    color: #fff;
+}    
+    
+    */
+
+
+
+
+/*enlaces no visitado
+a:link {
+    text-decoration: none;
+    color: red;
+}
+
+*/
+
+
+
+/*enlaces visitado
+a:visited {
+    text-decoration: line-through;
+    color: #ccc;
+}
+
+a:active{
+    text-decoration: underline;
+}
+
+*/
+
+
+
+/* quitar enlace
+    text-decoration: none;
+
+    linea por defecto
+    text-decoration: underline;
+
+
+    text-decoration: line-through;
+    tachar enlace
+
+*/
+
+
+
+/*para q no se repita la imagen
+    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-repeat: repeat-y;
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    */
+
+/*
+tamaño 
+    background-size: 500px;
+    background-size: 500px 100px;
+
+    background-size: 100%;
+    background-size: 50%;  de la pagina
+
+
+    background-size: cover; 
+    abarca el ancho
+
+    background-size: contain;
+    abarca el ancho y alto
+
+
+*/
+
+
+/*
+background-attachment: scroll;
+background-attachment: fixed;   fondo se queda pegado
+
+background-position: center center;
+background-position: 50px 200px;
+                    vertiycal y hortiontal
+
+*/
+
+
+
+
+/* Valores que podemos usar en las propiedades
+background: repeat | no-repeat | repeat-x | repeat-y;
+
+background-size: auto | 100px 100px | 100% 100% | cover | contain;
+
+Explicacion de valores para background-size
+	auto: Valor por defecto, el ancho y alto de la imagen.
+	ancho y alto: Ancho y alto que nosotros le especifiquemos, si solo ponemos el primer valor, el segundo sera automatico.
+	porcentaje:  Porcentaje del ancho y alto que tendra el fondo tomando en cuenta el contenedor padre.
+	cover: Ajusta el ancho de la imagen para que avarque el ancho del contenedor padre.
+	contain: Ajusta la imagen para que avarque el ancho y alto del contenedor padre.
+
+background-attachment: scroll | fixed ;
+*/
+
+
+
+/*selectores hijos*/
+/*solo los parrafos directamente del div es para tener mas control 
+
+
+div > p{
+    font-size: 20px;
+}
+
+*/
+
+
+
+
+/*Selector de atributos
+
+input[type]{
+
+}
+
+*/
+
+
+
+/*Selector de atributos valor
+
+input[type="text"]{
+
+}
+
+*/
+
+
+
+/*selectore de herencia
+
+body{
+    font-size: 30px;
+    color: red;
+}
+
+article{
+    font-size: 16px;
+    color: blue;
+}
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+/*selector universal
+
+*{
+    color: red;
+}
+
+*/
+
+
+
+/*selectores de etiqueta
+
+h1,h2,h3{
+    color: blue;
+}
+
+*/
+
+
+
+/*
+Estructura de una regla CSS
+body 	<---> 	Selector, al elemento al que le queremos aplicar los efectos
+color 	<---> 	Propiedad, efecto o cambio que le queremos dar al o los elementos
+blue 	<---> 	Valor que le daremos a la propiedad
+*/
+
+
