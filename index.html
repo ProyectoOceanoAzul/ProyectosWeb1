@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- El meta viewport es muy importante para realizar sitios web adaptables a dispositivos moviles -->
+
+    <!-- width=device-width: Establecemos que el ancho de la pagina sea igual al del dispositivo -->
+    <!-- user-scalable=no: Establecemos que el usuario no puede escalar el sitio web -->
+    <!-- initial-scale=1.0: Establecemos que la pagina tendra un tamaño inicial de 1  -->
+    <!-- maximum-scale=1.0: Establecemos que la pagina tendra un tamaño maximo de 1  -->
+    <!-- minimum-scale=1.0: Establecemos que la pagina tendra un tamaño minimo de 1  -->
+
+
+    <meta name="keywords" content="diseño wen, codigo, programacion, html, css, javascript, tutoriales">
+    </meta>
+
+    <meta name="description" content="Descripción de la palabrao recomendable 170 palabras">
+    <meta name="author" content="Gerson Nery - CEIDECO S.A.C.">
+
+    <title>Proyecto Layout Básica</title>
+
+
+    <!-- agregar Favicon 
+
+                agregar prinicipalmente     <link rel="shorcut icon"  type="image/x-icon">
+            -->
+    <link rel="shorcut icon" href="img/favicon.ico" type="image/x-icon">
+
+
+    <!-- bootstrap 
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    -->
+
+    <!-- Google Fonts -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet"> -->
+
+
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+
+
+<body>
+
+    <header class="header">
+
+        <div class="menu container">
+
+            <!-- logo -->
+            <a href="#" class="logo">GYM</a>
+
+            <!-- para el responsive -->
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="img/menu.png" alt="menu" class="menu-icono">
+            </label>
+
+            <!-- emnu -->
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Horario</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- dentro del conteniedo del header (como si fuera el banner) -->
+        <div class="header-content container">
+            <div class="header-info">
+                <h1>Se fuerte</h1>
+                <p>cada entrenamiento te hace mas fuerte</p>
+                <a href="#" class="btn-1">Empieza</a>
+            </div>
+        </div>
+
+    </header>
+
+
+
+    <!-- secciones -->
+    <section class="gym container">
+
+        <div class="gym-1">
+            <h2>
+                <span>GYM</span>
+                Funcional
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias perferendis sint maxime, distinctio
+                quidem enim eos dignissimos doloremque. Harum ipsa exercitationem numquam itaque laboriosam aliquam
+                nulla dolorem doloribus fugit quaerat.
+            </p>
+
+            <a href="#" class="btn-2">Empieza</a>
+        </div>
+
+
+        <div class="gym-2">
+            <img src="/img/g1.jpg" alt="g1" class="img-1">
+            <img src="/img/g2.jpg" alt="g2" class="img-2">
+
+        </div>
+
+    </section>
+
+
+
+    <section class="gym container">
+
+        <div class="gym-2">
+            <img src="/img/g3.jpg" alt="g3" class="img-1">
+            <img src="/img/g4.jpg" alt="g4" class="img-2">
+
+        </div>
+
+        <div class="gym-1">
+            <h2><span>GYM</span> Funcional</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias perferendis sint maxime, distinctio
+                quidem enim eos dignissimos doloremque. Harum ipsa exercitationem numquam itaque laboriosam aliquam
+                nulla dolorem doloribus fugit quaerat.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="gym container">
+
+        <div class="gym-1">
+            <h2><span>GYM</span> Funcional</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias perferendis sint maxime, distinctio
+                quidem enim eos dignissimos doloremque. Harum ipsa exercitationem numquam itaque laboriosam aliquam
+                nulla dolorem doloribus fugit quaerat.
+            </p>
+
+            <a href="#" class="btn-2">Empieza</a>
+        </div>
+
+
+        <div class="gym-2">
+            <img src="/img/g5.jpg" alt="g5" class="img-1">
+            <img src="/img/g6.jpg" alt="g6" class="img-2">
+
+        </div>
+
+    </section>
+
+
+    <!--pie de pagina -->
+    <footer class="footer container">
+        <h3>Logo</h3>
+
+        <div class="links">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Información</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+
+    </footer>
+
+
+    <!-- flex-wrap los elemenot q no caben los ponga debajo justify-content-center centar el contendi d-flex decimos q
+        trabajmos con flexbox py-4 m-0 padding en la y / margen de cero oporq los enccabezados tienen un margen col
+        columna de espacuioi restante de lo q le sobre p-0 pading cero a todo los lados col-auto ttmaño automatico
+        container-fluid abarca el 100% -->
+
+
+
+    <!-- 
+
+
+
+            col-sm-auto
+            al llega aun taamño quepemo en adelante sea autmatico
+
+
+            d-sm-block
+            en un tamaño pequieño en adelante los elemento tenga un display de tipo bloque
+
+
+            justify-content-between
+            colcoa los lemeenyos a la derecha
+
+
+            my-5
+            martgen arriba
+
+
+            rounded-top
+            broder redondeado
+
+
+            d-flex align-items-stretch
+            enlaces abarquen el 100% del alto
+
+
+            g-0
+            elimar el espacio por defecto en boostrap
+
+
+            w-100
+            abarque el 100% del espacio
+
+        -->
+
+
+    <!--
+            Flexbox 3
+            ------------
+
+            d-flex flex-nowrap
+            indicamos q todas las cajas intenten estar colcar dentro del contenedor en una sola fila
+
+
+            flex-wrap
+            las cajas q no caben los ponen debajo / las cajas ocupen el espacio q es necesirio y las 
+            q no lo pondran en otra fila
+
+
+            Align Content
+            nos peermite trabnajar gruppos de cajas podems central de forma veetical
+
+
+        -->
+
+
+    <!-- Variantes:
+                        .flex-nowrap
+                        .flex-wrap
+                        .flex-wrap-reverse
+
+                        sm | md | lg | xl | xxl
+                        .flex-*-nowrap
+                        .flex-*-wrap
+                        .flex-*-wrap-reverse
+                    -->
+
+
+
+    <!-- Variantes del Order:
+                        .order-1   		.order-5
+
+                        sm | md | lg | xl | xxl
+                        .order-*-1 	.order-*-5
+                    -->
+
+
+
+
+
+
+
+
+
+    <!-- 
+            Flexbox 2
+            ------------
+
+            d-flex align-items-start
+            align-items-start
+            aslinear elemento en forma vertical
+
+
+            class=" flex-fill" abarca todo el espacio de la caja d-flex justify-content-end cajas coloca al final
+                        class="me-auto" margen automatico a la iquiqrda class="ms-auto" elemento a lfuinal -->
+
+
+
+
+    <!-- 
+                        .flex-fill
+
+                        sm | md | lg | xl | xxl
+                        .flex-*-fill
+                    -->
+
+
+    <!-- Variantes:
+                        .align-items-start
+                        .align-items-end
+                        .align-items-center
+                        .align-items-baseline
+                        .align-items-stretch
+
+                        sm | md | lg | xl | xxl
+                        .align-items-*-start
+                        .align-items-*-end
+                        .align-items-*-center
+                        .align-items-*-baseline
+                        .align-items-*-stretch
+                    -->
+
+
+    <!-- Variantes:
+                        .align-self-start
+                        .align-self-end
+                        .align-self-center
+                        .align-self-baseline
+                        .align-self-stretch
+
+                        sm | md | lg | xl | xxl
+                        .align-self-*-start
+                        .align-self-*-end
+                        .align-self-*-center
+                        .align-self-*-baseline
+                        .align-self-*-stretch
+                    -->
+
+
+
+    <!-- 
+            Flexbox
+            ------------
+            para crear estructuras dentro de nuestras paginas
+            para trabajar con flexbos tenemos q usar la  clase    d-flex
+
+
+            d-inline-flex
+            la caja no abarca el 100% del espacioo disponible
+
+
+            d-flex justify-content-start
+            posoiutionar los lementos hijos a la izq
+
+        -->
+
+
+    <!-- 
+                    Podemos establecer que tipo de elemento flexbox sera, de tipo block o inline.
+                    Y podemos establecer tambien desde que dispositivo lo sera.
+
+                        .d-flex
+                        .d-inline-flex
+
+                        .d-sm-flex
+                        .d-sm-inline-flex
+                        .d-md-flex
+                        .d-md-inline-flex
+                        .d-lg-flex
+                        .d-lg-inline-flex
+                        .d-xl-flex
+                        .d-xl-inline-flex
+                    -->
+
+
+
+    <!-- Variantes
+                        .flex-row
+                        .flex-row-reverse
+
+                        .flex-column
+                        .flex-column-reverse
+
+                        sm | md | lg | xl | xxl
+                        .flex-*-row
+                        .flex-*-row-reverse
+                        .flex-*-column
+                        .flex-*-column-reverse
+                    -->
+
+
+
+
+    <!-- Variantes:
+                        .justify-content-start
+                        .justify-content-end
+                        .justify-content-center
+                        .justify-content-between
+                        .justify-content-around
+
+                        sm | md | lg | xl | xxl
+                        .justify-content-*-start
+                        .justify-content-*-end
+                        .justify-content-*-center
+                        .justify-content-*-between
+                        .justify-content-*-around
+                    -->
+
+
+
+
+
+    <!-- 
+            utiliadades
+            ------------ 
+
+            clearfix
+            se arregala el error por defecto si desaparece el contenedor padre
+
+            d-inline-block
+            agregao la esta clase a la estiqueta span para q se transformen en elemento linea de tipo bloque
+
+        -->
+
+    <!-- Espaciado
+                    p - Padding
+                    m - Margin
+
+                    t - Top
+                    b - Bottom
+                    s - Start (izquierda)
+                    e - End (derecha)
+
+                    y - Eje Y (Arriba y Abajo)
+                    x - Eje X (Izquierda y Derecha)
+                -->
+
+    <!-- Anchos
+                    .w-25 - Ancho del 25%
+                    .w-50 - Ancho del 50%
+                    .w-75 - Ancho del 75%
+                    .w-100 - Ancho del 100%
+                -->
+
+    <!-- Altos
+                    .h-25 - Alto del 25%
+                    .h-50 - Alto del 50%
+                    .h-75 - Alto del 75%
+                    .h-100 - Alto del 100%
+                -->
+
+
+    <!--
+            Componenetes II
+            -------------------
+            para q funcione en todo los dsipoitivo de lectura
+            role=" tablist" m-auto margen automatico <strong class="me-auto">Título</strong>
+                        indicarle q el titulo qde a la izq y lo demas a la derech
+
+
+                        aria-live="assertive"
+                        alerta q va aparecer
+
+                        <div class="toast-container">
+                            notificaciones, contenedor queremos q abarquete todo el tamaño de la pagina
+
+
+                            <span class="visually-hidden">
+                                oculto en lo dispotivos de lectura espacaial para persnas discapdaida visual
+
+                                Spiners
+                                efectro para indicarle a un compomnente q esta cargando
+
+
+                                progress-bar-animated
+                                agreamos a la para q tenga un efecto la animacion
+
+                                progress-bar-striped
+                                clase animacion a la barra de progress
+
+
+                                style="width: 25%;"
+                                ancho crezca en un 25%
+
+                                aria-valuemax="100"
+                                valor maximo de la barra de preogreso
+
+                                aria-valuemin="0"
+                                valor minimo de la barra de preogreso
+
+                                aria-valuenow="0"
+                                valor actual de la barra de preogreso
+
+
+                                <ul class="pagination justify-content-end">
+                                    justify-content-end
+                                    colcamos la paginacion al final
+
+
+
+                                    <ul class="pagination justify-content-center">
+                                        justify-content-center
+                                        centrar la paginacion
+
+
+                                        pagination-sm
+                                        paginacion pequeña
+
+                                        pagination-lg
+                                        paginacion grtande
+
+
+                                        aria-label="Página Siguiente"
+                                        personas con discapidad podran leer el texto
+
+
+                                        aria-current="page"
+                                        indiarle q es la pagina actual
+
+
+                                        tabindex="-1"
+                                        para q no puedan hacer tabs en ese elemento
+
+
+                                        aria-disabled="true"
+                                        para indicarles a los dispiotiovos de lectura q este elemento esta desbilitado
+
+
+                                        class="pagination"
+                                        estilo de la paginacion
+
+
+                                        data-bs-scroll="true"
+                                        habilitar el scroll en canvas
+
+
+                                        data-bs-backdrop="false"
+                                        para quitar el fondo de color negro al canvas
+
+
+                                        <div class="offcanvas offcanvas-bottom">
+                                            <div class="offcanvas offcanvas-top">
+                                                <div class="offcanvas offcanvas-end">
+                                                    <div class="offcanvas offcanvas-start">
+                                                        permite la ubicacion q va tener el canvas a la izq
+
+
+
+                                                        fixed-bottom
+                                                        para q se quede fija abajo la barra de menu
+
+                                                        fixed-top
+                                                        para q se quede fija arriba la barra de menu
+
+
+                                                        <body style="min-height: 2000px; padding-top: 56px;">
+                                                            permite desplazarme por todo mi pagina
+
+
+
+                                                            <div class="container-fluid">
+                                                                para q el menu aberque toda tu pagina
+
+                                                                data-bs-toggle="collapse"
+                                                                indicar para q cuando el usuario dea clic queremos ejecutar
+                                                                la funcion dropdown
+
+
+                                                                <div class="row mt-5" style="min-height: 500px;">
+                                                                    para q mi menu nav abarque 500px
+
+
+                                                                    aria-current="page"
+                                                                    para indicarle q nos encontramos en esta pestaña
+                                                                    actualmente
+
+
+                                                                    modal-dialog-scrollable
+                                                                    colcar una barra vertical en el modal
+
+
+                                                                    data-bs-backdrop="static"
+                                                                    para q el modal no se cierre
+
+                                                                    modal-dialog-centered">
+                                                                    para centrar el modal
+
+                                                                    data-bs-dismiss="modal"
+                                                                    para q el boton cierre la ventana modal
+
+                                                                    data-bs-toggle="modal"
+                                                                    quiero q me ejecuta la funcion modal para q me habra un
+                                                                    ventana emergente
+
+
+                                                                    align-items-center
+                                                                    alineado en forma vertical
+
+
+                                                                    badge
+                                                                    agregar como si fuera un etiqueta
+
+
+                                                                    list-group-flush
+                                                                    agregar una lista sin los bordes externos
+
+
+                                                                    <a href="#"
+                                                                        class="list-group-item list-group-item-action" decri
+                                                                        a boostarp q es un enlace de lista <ul
+                                                                        class="list-group">
+                                                                        quitamos la viñeta
+
+                                                                        <li class="list-group-item">
+                                                                            colocmaos en un casilla o recuadro
+
+
+                                                                            dropdown-menu-dark
+                                                                            para q el menu del boton dropdwon sea oscuro
+
+
+                                                                            class="visually-hidden"
+                                                                            para indicar a los dispotivos de lectura
+                                                                            especial un texto q ellos puedan leer a
+                                                                            los usuarios discaptiados
+
+                                                                            dropdown-toggle-split
+                                                                            dar le forma la boton dropdown split
+
+                                                                            Dropdown Split
+                                                                            solo dar clic en el boton
+
+
+                                                                            gap-2
+                                                                            separacion / espaciado al costado
+
+                                                                            dropdown-toggle
+                                                                            para q aparezca el icono en un extremo
+
+                                                                            aria-expanded="false"
+                                                                            son atriutots para dispotivos de lectura para
+                                                                            personas q tienen dificultad visual
+
+                                                                            data-bs-toggle="dropdown"
+                                                                            permite ejecutar la funcoin del dropdown
+
+                                                                            -->
+
+
+
+    <!-- 
+
+            class="form-control is-valid"
+            indicar al usuario q se valida
+
+
+            col-12
+            decir al boton q abarque las 12 columnas del espaio dispoble q tenga
+
+
+            d-flex justify-content-center
+            traajnod con flex y centrando
+
+
+            <div class="form-floating">
+            etiqueita flotante dentro del input tipo text
+
+
+            input-group
+            permite juntar varibos elemenrtos
+
+
+            aria-label
+            es un atributo similar a un etiqueta label
+
+
+
+            <div class=" d-flex justify-content-between">
+            separacion 
+
+            form-check-inline
+            checkbok en linea
+
+
+            form-switch
+            clase nueva
+
+            disabled
+            deshabiltyiado el boton select
+
+            size="3"
+            para q se muestren tres de tmaaño en el select
+
+            <select multiple
+            multiple
+            es un atriuto permite seleccioanr varios valores
+
+
+
+            form-select-sm
+            select taamñlo pequelo
+
+            form-select-lg
+            select tanmaño grande
+
+            input type="file"
+            para subir archivos
+            
+            class="form-control-plaintext
+            input de lectura no tiene el borde (parece un parrafo)
+
+            readonly
+            input de lectura
+            
+            form-control-lg
+            inoput mas grande
+
+        -->
+
+
+
+    <!-- 
+
+            disabled
+            deshabilitar el input
+
+
+            readonly
+            para no modificar el texto
+
+        -->
+
+
+
+    <!-- 
+            disabled
+            desabihoitlar el checjopbok
+        -->
+
+    <!--    
+
+            col-md-4
+            disppostivos grande y extragrande de 4
+
+            col-sm-9
+            disppostivos pequeñop de 9
+
+            col-12
+            dispsitivos extrapequeño de 12
+
+            mb-3
+            espacio inferior
+
+            mr-3
+            separar elementos a la derecha
+
+            form-inline
+            bootstrap va a posicioanr los elmeentos uno al lado del otro
+
+        -->
+
+    <!--
+
+
+            my-3
+            margen en el eje de la y (arriba / abajo)
+
+
+            -------------
+
+            data-bs-toggle=" collapse" aria-expanded="false" botones para los dispositivo q utilizan personas con
+                            discpcaidad -------------------- <div class="carousel-item" data-bs-interval="5000">
+                        data-bs-interval="5000
+                        para q el intervalo del slide diure mas
+
+
+
+                        class="carousel slide carousel-fade"
+                        carousel-fade
+                        para q tenga un transicion difeetne un efecto eleogante
+
+
+
+
+                        class="carousel slide carousel-dark"
+                        carousel-dark
+                        para colcoar texto controlo, indicadore de colocor negro
+
+
+                        aria-label="Slide 1"
+                        esto es para dispostivos a epersonas q tienen discapciada
+
+                        data-bs-slide-to="0"
+                        indicamos q cuando presione este boton a cual slide quermoe enviar
+
+
+                        class="visually-hidden"
+                        este espan estara visualmente oculto para personoas discapcidadr q tienen sistemas q le permite leer
+                        la pagina web para q ellos la puedan escuchar
+
+
+                        data-bs-slide="prev"
+                        indicamos al usaurio q al presionar quejore efecutar una funcion para un slider anterior
+
+
+                        class="img-fluid"
+                        imagen abarque el 100% del espacio dsiponible
+
+                        -->
+
+
+
+
+
+
+    <!--
+
+            nav-pills
+            menu tipo pestaña
+
+            para adaptar el medi
+            clase para poder adaptar al menu de navegacion al card
+
+
+            nav-tabs
+            decir navegacio por pestaña
+
+
+
+            list-group-flush
+            reduce el grosor del borde de lista
+
+
+            class="card-img-bottom"
+            imagen abajo
+
+
+            class="card-img-top"
+            imagen arriba
+
+
+            mb-2
+            margen inferior
+
+
+            class="card-img-top"
+            esquinas redondeaas
+
+
+        -->
+
+    <!-- Clases que podemos utilizar
+                .card 					Establecemos que trabajaremos con una tarjeta (card)
+                    .card-body 			Establecemos cual sera el contenedor del contenido
+                        .card-title 	Establecemos el un texto como titulo de la card
+                        .card-subtitle 	Establecemos un subtitulo para la card
+                        .card-text 		Establecemos el texto de la card.
+                        .card-link  	Establecemos un enlace como boton en la card
+                    .card-img-top 		Establecemos una imagen para la card en la parte superior
+                    .card-img-bottom 	Establecemos una imagen para la card en la parte inferior
+        -->
+
+
+    <!-- 
+
+            me-2
+            margen al final
+
+        -->
+
+    <!-- 
+
+            class=" btn-group" recomendable para los dispoitivos de discapacidad para q puedna saber q es un grupo de
+                            elementos y dispitivos de lectura class="btn-group" agrupo los botoner y ver q estan
+                            relacionados ---------------- class="d-fle gap-2" tababajr con flex y dar un espacio de 2 col-6
+                            colocmoas un tamaño fijo de 6 columnas pero no va ser responvive gap-2 clase q nos permite poner
+                            espaciado entre los elementos d-grid en este caso los botones van a estar juntos type=" button"
+                            ayudaran a algunas personas con discapiudad visual ---------------- breadcrumb pequeña
+                            navegacion q siver para decuirle al usuario en q parte de tu sitio web se encuentra
+                            ------------------ <span class="badge rounded-pill bg-primary">Etiqueta</span>
+                        insiginias o badgets redondedas
+
+                        <span class="badge bg-primary">Etiqueta</span>
+                        insiginias o badgets
+
+                        ------------------
+
+                        role="alert"
+                        para equivos de lecturra y equipos para personas con discapaciaad visual
+
+
+                        mt-3
+                        margen arriba
+
+                        --------
+
+                        accordion-flush
+                        quita los bordes al acoordeon
+
+
+
+                        show
+                        para q muestre el acordeoen
+
+
+                        aria-expanded="true"
+                        aria-controls="elemento-1"
+                        son opcionales, permite q el compomente acordeon en dispotivos de lectura
+                        para personas con discapcidad visual van a poder leer el acordeon
+
+
+
+                        data-bs-toggle="collapse"
+                        data-bs-target="#elemento-1"
+                        nos indican cuando damos un clic en el boton ejecute un collapse y luego decir cualelemento
+                        queremos ejercutar ese collapse
+
+
+                        mt-4
+                        para q tenga un margen en la parte de arraiba
+
+
+
+                        flex-wrap
+                        para q el boton no cabe a la derecha y se colcoque debajo ya q eñl textarea le dijismo q abarque el
+                        100%
+
+
+                        d-flex justify-content-end
+                        decir q quermeos treabajr con flex y colocamos a la derehca
+
+                        justify-content-center
+                        indicamos q las columnas q esten dentro de la fila las queremos centrar
+
+
+                        -------------------------------------
+
+                        class="mt-0"
+                        elimianr el posible espacidao arriba
+
+
+                        mr-3
+                        espaciado a la drechea
+
+
+                        align-self-start
+                        idnicaos en dondde queremos q la imagen se psosicone
+
+                        class="d-flex"
+                        infirmcamos para poder trabajr con displayflex
+
+                        ------------------
+
+                        permite resaltar esta combinacion
+
+
+                        <pre></pre>
+                        para saber como queda un texto sin formato
+
+
+                        &lt; &gt;
+                        caractres especiales
+
+
+                        <code>
+                            permite resaltar etiuewtas q ppuedo estar tutlizando
+
+
+                            class="container-fluid"
+                            contenedor para q abarque el 100%
+
+                            -->
+
+
+
+    <!-- Colores -->
+    <!-- Tenemos variantes disponibles para toda la tabla, toda una fila, o una celda -->
+    <!-- 
+                        .table-primary
+                        .table-secondary
+                        .table-success
+                        .table-danger
+                        .table-warning
+                        .table-info
+
+                        .table-light
+                        .table-dark
+                    -->
+
+
+    <!-- Clases de tablas -->
+    <!-- Estas clases tambien estan disponbiles para los diferentes colores -->
+    <!-- 
+                        .table-striped - Colorea en formato zebra para mejor lectura.
+                        .table-hover - Colorea las filas sobre las que pasamos el cursor.
+                        .table-bordered - Agrega bordes a la tabla.
+                        .border-danger - Colorea el borde.
+                        .table-borderless - Quita los bordes, incluso de las filas.
+                        .table-sm - Hace una tabla mas compacta quitandole padding a las celdas
+                    -->
+
+    <!-- Tabla Responsiva -->
+    <!-- Podemos encerrar la tabla en un div con la clase .table-responsive para hacerla responsiva -->
+
+
+
+
+
+
+
+    <!-- 
+
+
+                <table class="table table-striped table-hover table-sm">
+                clases o estilos de tabla
+
+
+                class="table"
+                estilos de tabla
+
+
+                rounded
+                colcoar esquinas redondeadas a los bordes
+
+                img-thumbnail
+                colcoar pequeñop borde
+
+
+                float-end
+                imagen envia al final
+
+
+                float-start
+                iamgen la enviua al inciirto
+
+
+                class="img-fluid"
+                abarque el 100% del espacio dispoinible del cotnenedor
+
+                -------------
+                <cite>
+                citar elementos
+
+                <figcaption class="blockquote-footer">
+                pie de cita
+
+
+                blockquote
+                estilos de citas
+
+                class="text-center"
+                centrarel texto
+
+                <figure>
+                citas para un libro
+
+                class="lead"
+                para los parrafos
+
+                class="display-1"
+                usado para logotivpos o la parte prinicpal del sitio
+
+                class="h1"
+                los encabezadios tienen sentido semantico
+
+                class="text-muted"
+                cambiar el color del texto
+
+
+                ------------------------
+
+                Bootstrap       funciona mendiante clases
+
+            -->
+
+
+
+    <!-- son herramientas adiconales 
+            <script src="js/bootstrap.bundle.min.js">
+            </script>    
+        -->
+
+
+    <!-- otras herramientas 
+            <script src="js/jquery.min.js"></script>
+            <script src="js/popper.min.js"></script>
+            <script src="js/app.js"></script>    
+        -->
+
+
+    <!-- para el efecto tooltip 
+        
+            <script>
+                const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+                const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+            </script>
+        -->
+
+
+    <!-- para el efecto popover 
+        
+            <script>
+                const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+                const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+            </script>
+                
+        -->
+
+
+    <!-- 
+            no funciona para Dropdown
+            <script src="js/bootstrap.min.js"></script>
+        -->
+
+</body>
+
+
+</html>
